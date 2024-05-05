@@ -15,9 +15,9 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-    // here we'll just pass the "_id" of the book which we want to delete, and it'll call the api in backend (delete(`http://localhost:5555/books/${id}),
+    // here we'll just pass the "_id" of the book which we want to delete, and it'll call the api in backend (delete(`https://bookstore-mern-stack-r1nd.onrender.com/books/${id}),
     // then it'll find the book by it's ID and delete it from the database
-      .delete(`http://localhost:5555/books/${id}`)
+      .delete(`https://bookstore-mern-stack-r1nd.onrender.com/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted successfully', { variant: 'success' });

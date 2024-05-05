@@ -22,12 +22,12 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-    // now, it'll call the post api (post('http://localhost:5555/books')), and from body the data will get passed and, backend 
+    // now, it'll call the post api (post('https://bookstore-mern-stack-r1nd.onrender.com/books')), and from body the data will get passed and, backend 
     // will get the all data by using "req.body", then it'll create a book using this JSON values.
     // then it'll navigate to ('/'), at Home from where it'll go to BooksTable having the all the data from the database as props, 
     // and it'll reflect all the books data
     
-      .post('http://localhost:5555/books', data)
+      .post('https://bookstore-mern-stack-r1nd.onrender.com/books', data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });

@@ -20,7 +20,7 @@ const ShowBook = () => {
     axios
     // to get the single book, we'll pass the "_id" here in .get() then it'll get the response from the backend, 
     // by searching in the database and return the book from backend and we'll get that as response.data
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://bookstore-mern-stack-r1nd.onrender.com/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

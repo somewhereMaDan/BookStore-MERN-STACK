@@ -18,7 +18,7 @@ const EditBook = () => {
     // now we're here so initially, it'll simply get the data for a single book, and store in useState so that it could show, what
     // we had previously
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://bookstore-mern-stack-r1nd.onrender.com/books/${id}`)
     // this get API will show the details for specific book 
     .then((response) => {
         setAuthor(response.data.author);
@@ -43,7 +43,7 @@ const EditBook = () => {
 
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://bookstore-mern-stack-r1nd.onrender.com/books/${id}`, data)
       // now passing the JSON to the specific book (by it's _id, which we got through useParams(), because we it got link to this page it has the _id)
       .then(() => {
         setLoading(false);
