@@ -1,0 +1,9 @@
+Store - Global Object
+
+useSelector -> like a guy which can directly talk to the store. Component can't just directly go to store to get the data they use this hook, so that key could selectively ask that I need this information.
+
+reducers -> almost  like controllers, job is to update, delete, add the thing.
+	It'll have key value thing which will have actions
+
+useDispatch -> whenever you want to update some info in the store, we do that using reducers but we can't directly call the reducers it'll break the flow. 
+	we use this hook, through this we'll call a selective reducer at and this reducer will get updated in the store.
